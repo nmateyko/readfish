@@ -624,7 +624,6 @@ If there isn't a newer version of readfish and readfish is failing, please open 
         prefilter_classes={
             "strand",
             "strand2",
-            "short_strand",
             "adapter",
             "unknown_positive",
         },
