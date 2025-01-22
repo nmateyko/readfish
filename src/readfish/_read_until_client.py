@@ -71,7 +71,7 @@ class RUClient(ReadUntilClient):
         )
         if self.mk_host not in ("localhost", "127.0.0.1"):
             # running remotely, output in cwd
-            self.mk_run_dir = "."
+            self.mk_run_dir = Path(".")
         # Loop until the run folder exists or the run stops
         self.wait_for_minknow_folder(self.timeout)
         # Attempt to create `unblocked_read_ids.txt` if this fails set the run
