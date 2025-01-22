@@ -618,6 +618,7 @@ If there isn't a newer version of readfish and readfish is failing, please open 
     read_until_client = RUClient(
         mk_host=position.host,
         mk_port=position.description.rpc_ports.secure,
+        token=args.token,
         filter_strands=True,
         cache_type=AccumulatingCache,
         timeout=args.wait_for_ready,
