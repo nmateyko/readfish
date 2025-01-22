@@ -125,11 +125,13 @@ class ReadUntilClient(object):
         prefilter_classes: Set[str,] = None,
         calibrated_signal: bool = False,
         mk_credentials: grpc.ChannelCredentials = None,
+        token: str = None,
     ):
         self.logger = logging.getLogger("ReadUntil")
 
         self.mk_host = mk_host
         self.mk_grpc_port = mk_port
+        self.token = token
 
         # class type to use for caching reads
         self.CacheType = cache_type  # pylint: disable=invalid-name
@@ -142,7 +144,7 @@ class ReadUntilClient(object):
 
         try:
             self.connection = Connection(
-                host=self.mk_host, port=self.mk_grpc_port, credentials=mk_credentials
+                host=self.mk_host, port=self.mk_grpc_port, developer_api_token=token
             )
         except:
             # FIXME: Broad exception
