@@ -81,6 +81,14 @@ DEVICE_BASE_ARGS = (
         ),
     ),
     (
+        "--token",
+        dict(
+            metavar="API-ACCESS-TOKEN",
+            help="API access token for the MinKNOW server",
+            default=None,
+        ),
+    ),
+    (
         "--device",
         dict(
             metavar="DEVICE",
