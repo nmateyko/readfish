@@ -655,7 +655,6 @@ If there isn't a newer version of readfish and readfish is failing, please open 
         accepted_first_chunk_classifications=[
             "strand",
             "strand2",
-            "short_strand",
             "adapter",
             "unknown_positive",
         ],
